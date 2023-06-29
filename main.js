@@ -16,7 +16,7 @@ recognition.onresult = function(event){
 
     console.log(event);
 
-     var content = event.result[0][0].transcript;
+     var content = event.results[0][0].transcript;
 
     document.getElementById("status").innerHTML = " The speach has been recognized as: "+content;
 
@@ -47,11 +47,11 @@ function draw(){
         draw_circle = "";
     }
 
-    if(draw_circle == "set"){
-        width = random(50,100);
-        height = random(150,200);
-        rectangle(x,y,width,height);
-        document.getElementById("status").innerHTML = "Circle is drawn.";
-        draw_circle = "";
+    if(draw_rect == "set"){
+        width = random(150,200);
+        height = random(50,100);
+        rect(x,y,width,height);
+        document.getElementById("status").innerHTML = "Rectangle is drawn.";
+        draw_rect = "";
     }
 }
